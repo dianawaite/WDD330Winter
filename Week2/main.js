@@ -27,3 +27,34 @@ function addUp() {
 
 }
 
+const question = "What is Superman's real name?"
+const answer = prompt(question);
+alert(`You answered ${answer}`);
+
+for (let line = "#"; line.length < 8; line += "#")
+  console.log(line);
+
+for (let n = 1; n <= 100; n++) {
+    let output = "";
+    if (n % 3 == 0) output += "Fizz";
+    if (n % 5 == 0) output += "Buzz";
+    console.log(output || n);
+  }
+
+  const makeNoise = function() {
+    console.log("Pling!");
+  };
+  
+  makeNoise();
+  // → Pling!
+  
+  const power = function(base, exponent) {
+    let result = 1;
+    for (let count = 0; count < exponent; count++) {
+      result *= base;
+    }
+    return result;
+  };
+  
+  console.log(power(2, 10));
+  // → 1024
