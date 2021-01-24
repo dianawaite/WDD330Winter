@@ -8,7 +8,7 @@
 <body>
     <h1>Javascript: Novice to Ninja Chapter 5</h1>
     <p>
-        Six primitive data types:
+        Six primitive data types:<br>
         strings, numbers, booleans, symbols, undefined, and null
     </p>
     <p>
@@ -31,12 +31,14 @@
         };
         All objects are mutable when the program is running. it's properties and methods can be changed
         and new methods or properties can be added to the object, even if it was created as a "const"
-
+    </p>
+    <p>
         ACCESSING PROPERTIES
         You can access the properties of an object by using the dot notation: superman.name
         You can also access the object's properties by using bracket notation: superman['name']
         This is the only way to access non standard property and method names that don't follow the variable naming method.
-
+    </p>
+    <p>
         COMPUTED PROPERTIES
         Starting in ES6 JavaScript code can be placed inside square brackets and the property key will be the return value of that code.
         
@@ -51,35 +53,44 @@
         CHECKING IF PROPERTIES OR METHODS EXIST
         The in operator can be used to check whether an object has a particular property.
         Another way is to use the hasOwnProperty() method. 
-
+    </p>
+    <p>
         FINDING ALL THE PROERTIES OF AN OBJECT
         We can loop through all of an object’s properties and methods by using a for in loop.
-
+    </p>
+    <p>
         ADDING PROPERTIES
         We can add properties to an object at any time in a program.
-
+    </p>
+    <p>
         CHANGING PROPERTIES
         You can change the properties of an object at any time using an assignment.
-
+    </p>
+    <p>
         REMOVING PROPERTIES
         Properties can be removed from an object using the delete operator.
-
+    </p>
+    <p>
         NESTED OBJECTS
         It is possible to have objects within other objects. These are called Nested Objects
-
+    </p>
+    <p>
         OBJECTS ARE COPIED BY REFERENCE
         An important concept to get your head around is that objects are assigned byreference. 
         This means that if a variable is assigned to an object that already exists, it will 
         simply point to the exact same space in memory. So any changes made usingeitherreference 
         will affect the same object.
-
+    </p>
+    <p>
         OBJECTS AS PARAMETERS TO functions
         An object literal can be passed as a parameter to a function.
-
+    </p>
+    <p>
         This
         The keyword this refers to the object that it is within. 
         It can be used inside methods to gain access to the object’s properties.
-
+    </p>
+    <p>
         NAMESPACING
         A solution to this problem is to use theobject literal patternto create a namespace 
         for groups of related functions. This is done by creating an object literal that 
@@ -91,37 +102,38 @@
         The Math object has eight properties that represent a mix of commonly used math constants. Note that they are all named in capital letters, as is the convention for constant values:
 
 Math.PI // The ratio of the circumference and diameter of a circle
-<< 3.141592653589793
+<< 3.141592653589793<br>
 Math.SQRT2 // The square root of 2
-<< 1.4142135623730951
+<< 1.4142135623730951<br>
 Math.SQRT1_2 // The reciprocal of the square root of 2
-<< 0.7071067811865476
+<< 0.7071067811865476<br>
 Math.E // Euler's constant
-<< 2.718281828459045
+<< 2.718281828459045<br>
 Math.LN2 // The natural logarithm of 2
-<< 0.6931471805599453
+<< 0.6931471805599453<br>
 Math.LN10 // The natural logarithm of 10
-<< 2.302585092994046
+<< 2.302585092994046<br>
 Math.LOG2E // Log base 2 of Euler's constant
-<< 1.4426950408889634
+<< 1.4426950408889634<br>
 Math.LOG10E // Log base 10 of Euler's constant
 << 0.4342944819032518
-
+    </p>
+    <p>
 MATH methods
 Absolute math.abs 
 Rounding 
-    math.ceil will round up to the next integer
-    math.floor will round down to the next integer, or leave it along if it is already an integer
-    math.round will round the number to the nearest integer
-    math.trunc will truncate a number to its integer
-    math.exp() will raise a number to the power of Euler's constant (2.1??)
-    math.pow() will raise any number (1st argument) to the power of the second number (second argument)
-    math.sqrt() returns the positive square root of a number
-    math.cbrt() returns the cube root of numbers (ES6)
-    math.hypot() ES6, used for hypotenuse triangles
-    math.log() returns the natural logarithm of a number
-    math.max() returns max of all arguments
-    math.min() returns minimum of all arguments
+    math.ceil will round up to the next integer<br>
+    math.floor will round down to the next integer, or leave it along if it is already an integer<br>
+    math.round will round the number to the nearest integer<br>
+    math.trunc will truncate a number to its integer<br>
+    math.exp() will raise a number to the power of Euler's constant (2.1??)<br>
+    math.pow() will raise any number (1st argument) to the power of the second number (second argument)<br>
+    math.sqrt() returns the positive square root of a number<br>
+    math.cbrt() returns the cube root of numbers (ES6)<br>
+    math.hypot() ES6, used for hypotenuse triangles<br>
+    math.log() returns the natural logarithm of a number<br>
+    math.max() returns max of all arguments<br>
+    math.min() returns minimum of all arguments<br>
     math.random() creates a number between 0 and 1
 
     </p>
