@@ -1,0 +1,63 @@
+Week 7 Notes
+
+Function properties and methods
+Immediately Invoked function expressions
+Self-defining functions
+Recursive functions
+Callbacks
+Promises
+Async functions
+Functions that return functions
+Closures
+Introduction to functional programming
+Currying
+Project ― improve some of the functions using techniques from this chapter
+
+Let’s use the square() function that we wrote in chapter 4 as an example:
+
+function square(x) {
+    return x*x;
+}
+If we query the length property, we can see that it accepts one parameter:
+
+square.length
+<< 1
+
+const clark = { name: 'Clark' };
+const bruce = { name: 'Bruce' };
+sayHello.call(clark);
+<< 'Hello, my name is Clarke'
+sayHello.call(bruce);
+<< 'Hello, my name is Bruce'
+
+function sayHello(greeting='Hello'){
+    return `${ greeting }, my name is ${ this.name }`;
+}
+sayHello.call(clark, 'How do you do');
+<< 'How do you do, my name is Clark'
+sayHello.call(bruce);
+<< 'Hello, my name is Bruce'
+
+Memoization
+function square(x){
+    square.cache = square.cache || {};
+    if (!square.cache[x]) {
+        square.cache[x] = x*x;
+    }
+    return square.cache[x]
+}
+
+IIFE
+(function(){
+    const temp = 'World';
+    console.log(`Hello ${temp}`);
+    })();
+    << 'Hello World'
+
+Initialization Completed(function() {
+    const name = 'Peter Parker'; // This might be obtained from a cookie in reality
+    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday', 'Friday','Saturday'];
+    const date = new Date(),today = days[date.getDay()];
+    console.log(`Welcome back ${name}. Today is ${today}`);
+})();
+<< 'Welcome back Peter Parker. Today is Tuesday'
