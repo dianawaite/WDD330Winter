@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 Notes</title>
+</head>
+<body>
+    
+
+
+<div>Transform & Rotate
+
+The rotate() function rotates an element around the point of origin by a
+specified angle value. As with scale , by default the point of origin is the
+element’s center. Generally, angles are declared in degrees, with positive
+degrees moving clockwise and negative moving counterclockwise. In addition to
+degrees, values can be provided in grads, radians, or turns, but we’ll just be
+sticking with degrees. Let’s add a rotate transform to our “dukes”: .ad-ad2
+h1:hover span { color: #484848; transform: rotate(10deg) translateX(40px)
+scale(1.5); } We’re rotating our span by ten degrees clockwise—adding to the
+effect of text that’s just been dealt a powerful uppercut. We are declaring the
+rotationbeforethe translate so that it’s applied first—remember that transforms
+are applied in the order provided. In this case, the span will be rotated 10
+degrees, and then moved 40px along the rotated x axis.
+</div>
+<div>Skew
+Skew
+The skew(x,y) function specifies a skew along the x and y axes. As you’d expect, the x specifies the skew on the x axis, and the y specifies the skew on the y axis. If the second parameter is omitted, the skew will only occur on the x axis:
+
+transform: skew(15deg, 4deg);
+Applying these styles to a heading, for example, results in the skew shown in Figure 8.6.
+
+Some text with a skew transform applied
+
+Figure 8.6. Some text with a skew transform applied
+
+As with translate and scale , there are axis-specific versions of the skew transform: skewX() and skewY() .
+
+.rotate {
+    transform: rotate(15deg);  
+    filter: progid:DXImageTransform.Microsoft.Matrix(
+        sizingMethod='auto expand', M11=0.9659258262890683, 
+        M12=-0.25881904510252074, M21=0.25881904510252074, 
+        M22=0.9659258262890683); 
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(
+        M11=0.9659258262890683, M12=-0.25881904510252074, 
+        M21=0.25881904510252074, M22=0.9659258262890683,
+        sizingMethod='auto expand')"; 
+    zoom: 1;
+}
+</div>
+<p>Animation Timing Function</p>
+.ad-ad3 :after {
+    content: '';
+    width: 90px;
+    height: 92px;
+    background-image: url(../images/bike_sprite.png);
+    display: block;
+    margin: auto;
+}
+@keyframes bike {
+    0% {
+    background-position: 0 0;
+    }
+    100% {
+        background-position: -360px 0;
+    }
+}
+
+<p>
+    @keyframes bike {
+        0% {
+        background-position: 0 0;
+        }
+        100% {
+        background-position: -360px 0;
+        }
+    }
+    @keyframes move {
+        0% {
+        transform: translateX(-100px);
+        }
+        100% {
+        transform: translateX(100px);
+        }
+    }  
+        
+    h1:after {
+        content: '';
+        width: 90px;
+        height: 92px;
+        background-image: url(../images/bike_sprite.png);
+        display: block;
+        margin: auto;
+        animation: 
+            0.4s steps(4, end) infinite 50ms bike,
+            8s linear infinite 50ms move;
+        animation-play-state: paused;
+    }
+    h1:hover:after {
+        animation-play-state: running;
+    }
+</p>
+</body>
+</html>
